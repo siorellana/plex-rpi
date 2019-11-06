@@ -8,3 +8,4 @@ downloads/*
 .gitconfig
 *.log
 .DS_Store
+*.bak

@@ -33,6 +33,10 @@ templates:
       - Tosh.0
       - True Detective
       - Westworld
+      - The Handmaid`s Tale
+      - Watchmen
+      - His Dark Materials
+      - Years And Years
 
     transmission:
       host: transmission
@@ -41,8 +45,12 @@ templates:
       password: "123456"
 
 tasks:
-  eztvrss:
-    rss: https://eztv.ag/ezrss.xml
+  handmaid:
+    rss: https://showrss.info/show/811.rss
+    template: tv
+    priority: 2
+  watchmen:
+    rss: https://showrss.info/show/1213.rss
     template: tv
     priority: 2
   sort_tv:

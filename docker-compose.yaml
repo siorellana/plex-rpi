@@ -16,25 +16,11 @@ services:
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
 
-  plex:
-    image: jaymoulin/plex:1.16.5
-    expose:
-      - 32400
-      - 33400
-    hostname: raspberrypi
-    volumes:
-      - ${STORAGE}/Plex Media Server:/root/Library/Application Support/Plex Media Server
-      - ${MEDIA}:/media
-      - ${STORAGE}/tmp:/tmp
-    restart: unless-stopped
-    networks: 
-      lan:
-        ipv4_address: 192.168.0.3
-
   transmission:
     image : jaymoulin/transmission
     command: transmission-daemon -f -g /config
     volumes:
+      - ${STORAGE}/transmission/settings.json:/config/settings.json:ro
       - ${STORAGE}/transmission:/config
       - ${STORAGE}/torrents:/downloads
     ports:
@@ -59,13 +45,3 @@ services:
     restart: unless-stopped
     links:
       - transmission
-
-networks:
-  lan:
-    driver: macvlan
-    driver_opts:
-      parent: eth0
-    ipam:
-      config:
-        - subnet: "192.168.0.0/24"       
-          gateway: "192.168.0.1"
