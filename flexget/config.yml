@@ -3,7 +3,7 @@ web_server: yes
 schedules:
   - tasks: '*'
     interval:
-      minutes: 30
+      minutes: 60
 
 templates:
   tv:
@@ -58,8 +58,16 @@ tasks:
     rss: https://showrss.info/show/1234.rss
     template: tv
     priority: 2
-  sort_tv:
+  rick:
+    rss: https://showrss.info/show/44.rss
+    template: tv
     priority: 2
+  materials:
+    rss: https://showrss.info/show/1224.rss
+    template: tv
+    priority: 2
+  sort_tv:
+    priority: 1
     no_entries_ok: yes
     parsing:
       series: guessit
