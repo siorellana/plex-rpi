@@ -37,6 +37,7 @@ templates:
       - Watchmen
       - His Dark Materials
       - Years And Years
+      - The Mandalorian
 
     transmission:
       host: transmission
@@ -51,6 +52,10 @@ tasks:
     priority: 2
   watchmen:
     rss: https://showrss.info/show/1213.rss
+    template: tv
+    priority: 2
+  mandalorian:
+    rss: https://showrss.info/show/1234.rss
     template: tv
     priority: 2
   sort_tv:
