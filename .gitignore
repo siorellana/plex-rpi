@@ -11,3 +11,6 @@ downloads/*
 *.bak
 STORAGE/*
 MEDIA/*
+flexget/cached_resources/*
+flexget/.config-lock
+*.sqlite
