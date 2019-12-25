@@ -38,6 +38,7 @@ templates:
       - His Dark Materials
       - Years And Years
       - The Mandalorian
+      - The Morning Show
 
     transmission:
       host: transmission
@@ -48,6 +49,10 @@ templates:
 tasks:
   handmaid:
     rss: https://showrss.info/show/811.rss
+    template: tv
+    priority: 2
+  morning:
+    rss: https://showrss.info/show/1227.rss
     template: tv
     priority: 2
   watchmen:

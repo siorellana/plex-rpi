@@ -14,3 +14,5 @@ MEDIA/*
 flexget/cached_resources/*
 flexget/.config-lock
 *.sqlite
+flexget/db-config-jobs.sqlite
+flexget/db-config.sqlite
