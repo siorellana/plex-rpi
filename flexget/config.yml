@@ -39,6 +39,10 @@ templates:
       - Years And Years
       - The Mandalorian
       - The Morning Show
+      - The Witcher
+      - Years And Years
+      - Curb Your Enthusiasm
+      - Seinfeld
 
     transmission:
       host: transmission
@@ -69,6 +73,14 @@ tasks:
     priority: 2
   materials:
     rss: https://showrss.info/show/1224.rss
+    template: tv
+    priority: 2
+  years:
+    rss: https://showrss.info/show/1173.rss
+    template: tv
+    priority: 2
+  witcher:
+    rss: https://showrss.info/show/1248.rss
     template: tv
     priority: 2
   sort_tv:

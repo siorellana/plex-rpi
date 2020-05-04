@@ -1,3 +1,9 @@
+*.log*
+*.log
+**/*.log
+**/*.log*
+**/*.sqlite*
+**/*.sqlite
 media/*
 plex/*
 .bash*
